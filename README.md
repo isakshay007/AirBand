@@ -1,7 +1,7 @@
 # AirBand
 AI-Powered Early Respiratory Health Assistant
 
-*A next-generation multimodal health system built using iPhone sensors + HuggingFace HEAR.*
+*A next-generation multimodal health system built using iPhone sensors*
 
 AirBand is a real-time respiratory screening tool that uses only an iPhone microphone and accelerometer to detect early signs of respiratory irregularity. It is designed for hackathons and rapid prototyping where functional, working systems are required.
 
@@ -27,32 +27,6 @@ Combining both signals gives a holistic, medically supported profile — without
 
 ---
 
-## Key Features
-
-### 1. Cough Analysis (Audio AI)
-
-- Records ~2 seconds of cough audio  
-- Converts to 16 kHz mono  
-- Extracts a HEAR acoustic embedding (e.g., 512 dimensions)  
-- Computes anomaly scores and classifications
-
-### 2. Breathing Rhythm Detection (Motion AI)
-
-- User places phone on chest
-- Collects ~10 seconds of accelerometer data (x, y, z, t)
-#### Performs:
-- Peak detection
-- Breaths per minute (BPM)
-- Irregularity index
-- Stability metrics
-
-### 3. Combined AirBand Score
-
-Both signals are fused into a single AirBand Score (0–100) with an interpretable risk level:
-- Low Risk
-- Moderate Risk
-- High Risk
-
 ## System Architecture
              ┌────────────────────────────┐
              │        iPhone App          │
@@ -70,7 +44,7 @@ Both signals are fused into a single AirBand Score (0–100) with an interpretab
                       ▼            ▼
          ┌────────────────┐   ┌──────────────────┐
          │  Cough Engine  │   │ Breathing Engine │
-         │ (HEAR Embeds)  │   │ (Accelerometer)  │
+         │ (Grok Embeds)  │   │ (Accelerometer)  │
          └──────┬─────────┘   └─────────┬────────┘
                 ▼                       ▼
           ┌────────────────────────────────────┐
@@ -83,8 +57,8 @@ Both signals are fused into a single AirBand Score (0–100) with an interpretab
           └───────────────────────────────────┘
 
 ## Team Members
-- Akshay
-- Akshay
+- Akshay Kumaran
+- Akshay Keerthi
 - Kunal
 - Joevita
 - Harini
